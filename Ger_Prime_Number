@@ -1,0 +1,10 @@
+def get_prime_factor(x):
+    factor = []
+    j = 2
+    while j < x:
+        if x % j == 0:
+            factor.append(j)
+            j = j + 1
+        else:
+            j = j + 1
+    return factor
