@@ -1,7 +1,7 @@
 def get_prime_factor(x):
     factor = []
     j = 2
-    while j < x:
+    while j <= x:
         if x % j == 0:
             factor.append(j)
             x = x/j
