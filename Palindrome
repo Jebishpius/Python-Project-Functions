@@ -1,0 +1,4 @@
+def palindrome(k):
+    k = k.upper()
+    l = ''.join(filter(str.isalpha, k)) 
+    return(l == l[::-1])
