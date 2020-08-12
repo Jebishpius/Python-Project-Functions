@@ -1,0 +1,10 @@
+def max_prof(x):
+  y = {}
+  for i in range(len(x)):
+    x[i]
+    k = []
+    for j in x[i:]:
+      k.append(j - x[i])
+      h = max(k)
+      y[i] = h
+  return max(y.values())
