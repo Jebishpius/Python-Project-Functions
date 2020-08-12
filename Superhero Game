@@ -1,0 +1,86 @@
+import random
+import time
+def superhero():
+  import random
+  import time
+  superPowers = ['Flying', 'Super Strength', 'Telepathy', 
+               'Super Speed', 'To create', 'Super Smarts', 'Super Coolness', 
+               'Power to have all powers', "Eat a Lot of HotDogs", "Super Cure", "Immortality",
+               'Super Senses', 'Diabeetus']
+  superFirstName = ['Wonder','Lameo',
+                  'Rabid','Incredible', 'Astonishing', 
+                  'Before-good', 'Stupendous', 'Above-average', 'Cool Jeb', 'Improbably', 'Whatta', 
+                  'The Amazing', 'Corona Virus', 'Leader', 'The Fat', 'All']
+  superLastName = ['Boy', 'Man', 'Dingo', 'Beefcake', 'Guy', 
+                 'Hero', 'Keb', 'Dream', 'Macho Man','Stallion', 'Might', 'Quick', 'Loser', 'Stink Pants', 'Stinge' ]  
+  d = {}
+  d['1superName'] = random.choice(superFirstName)+ " " +random.choice(superLastName)
+  d['2power']= random.choice(superPowers)
+  d['brains'] = random.randint(1,100)
+  d['braun'] = random.randint(1,100)
+  d['stamina'] = random.randint(1,100)
+  d['wisdom'] = random.randint(1,100)
+  d['constitution'] = random.randint(1,100)
+  d['dexterity'] = random.randint(1,100)
+  d['speed'] = random.randint(1,100)
+  d['faith'] = random.randint(1,100)
+  d['stealth'] = random.randint(1,100)
+  d['luck'] = random.randint(1,100)
+  d['speech'] = random.randint(1,100)
+  d['teamwork'] = random.randint(1,100)
+  d['leadership'] = random.randint(1,100)
+  d['cool factor'] = random.randint(1,100)
+  return d
+  
+  def enemies_10():
+  Powers = ['Stinkeye', 'Smelly Breath', 'Nasty Face', 
+               'Cringe Laugh', 'Baldicus Head', 'Corona Virus', 'DaBeetus', 
+               'Fatness', "Gluttony", "Greed", "Sloth",
+               'Death', 'Wrath', 'Thunder', 'Water', 'Fire', 'Garbage', 'Mimic']
+  FirstName = ['Corona Virus', 'Leader', 'The Fat', 'All', 'The Evil', "The Viscious", "The Venomous", "Dark", "Stupid", 'Conman', 'Vile',
+               'Flick', "Monstrous", "Gross", 'Monkey', 'Dart', 'Ugly', 'Stinky', 'Mad', 'Savage', 'Dingus']
+  LastName = ['Guy','Stinge', 'Shub', 'Shadow', 'Slime', 'Dart', 'HotDog', 'Lightning McQueen', 'Tow Mater', 'Man Bat', 'Toad', 'Creature', 'Virus', 'Barf', 'Spy', 'Bingus']
+  d = {}
+  d['1superName'] = random.choice(FirstName)+ " " +random.choice(LastName)
+  d['2power']= random.choice(Powers)
+  level = random.randint(1,10)
+  d['brains'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['braun'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['stamina'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['wisdom'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['constitution'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['dexterity'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['speed'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['faith'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['stealth'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['luck'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['speech'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['teamwork'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['leadership'] =int(random.randint(1,70) * (int(level)/10 + 1.05))
+  d['cool factor'] = int(random.randint(1,70) * (int(level)/10 + 1.05))
+  return d
+  
+  def battle(a,b):
+  c = 0
+  d = 0
+  for key in a:
+    if key != '1superName' and key != '2power':
+      if int(a[key]) > int(b[key]):
+        c += 1
+      elif int(a[key]) < int(b[key]):
+        d += 1
+      else:
+        pass
+    else:
+      pass
+  if c > d:
+    return (a['1superName'] +" used the power of "+ a["2power"] + " to defeat " + b['1superName'] + " By a Score of " + str(c) + " to " + str(d))
+    
+  elif d > c:
+    return (b['1superName']+" used the power of "+ b["2power"] +" to defeat " + a['1superName'] +" By a Score of " + str(d) + " to " + str(c))
+    
+  else:
+    return ("Its a tie " + str(c) + " to "+ str(d) )
+    
+    
+    
